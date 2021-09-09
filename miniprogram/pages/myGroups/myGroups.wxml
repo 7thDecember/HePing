@@ -1,0 +1,2 @@
+<!--miniprogram/pages/myGroups/myGroups.wxml-->
+<card wx:for="{{infos}}" info="{{item}}" wx:key="item._id"_id="{{item._id}}"></card>

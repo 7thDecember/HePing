@@ -1,0 +1,9 @@
+<!--miniprogram/pages/my/test/test.wxml-->
+<view class="box">
+  <view>
+    <view wx:for="{{users}}">
+      <text>{{item.nickname}}</text>
+      <view catchtap="goToChatroom" data-openid="{{item._openid}}" data-name="{{item.nickname}}"><image src="{{item.avatar}}" bindtap=""></image></view>
+    </view>
+  </view>
+</view>

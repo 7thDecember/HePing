@@ -1,0 +1,25 @@
+<!--components/newMessages/newMessages.wxml-->
+<!--示例用户1-->
+<view class='user' data-postid='{{postid}}'>
+  <image class='header-icon' src='{{avatar}}'></image>
+  <view class='user-content'>
+    <view class='firstline'>
+      <view class='apart'>
+      <view class='username'>
+        <text>{{userName}}</text>
+        <mp-badge wx:if="{{read==false}}" style="margin-left: 5px;margin-right: 5px;" ext-class="blue"/>
+      </view>
+      </view>
+      <view class='time'>
+        <view class='time-num'>{{time}}</view>
+      </view>
+    </view>
+    <view class='secondline'>
+      <view class='dialog'>
+      <text>{{firstMessage}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!--分割线-->
+<view class='linecut'></view>

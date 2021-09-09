@@ -1,0 +1,15 @@
+<!--pages/home/home.wxml-->
+<mp-loading type="dot-gray" show="{{loading}}"></mp-loading>
+<view class="{{loading==true?'hidden':'page_container'}}">
+  <view class="head">
+    <mp-searchbar bindblur="selectResult" bindclear="clear" cancelText=''></mp-searchbar>
+  </view>
+
+  <view class="body">
+    <tabs tabs="{{tabs}}" binditemchange="handleItemChange"></tabs>
+    <view wx:for="{{infos_area}}">
+      <card  info="{{item}}"  wx:key="item._id" _id="{{item._id}}"></card>
+    </view>
+  </view>
+</view>
+

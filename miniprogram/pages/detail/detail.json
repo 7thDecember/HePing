@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "mp-icon": "weui-miniprogram/icon/icon",
+    "mp-slideview": "weui-miniprogram/slideview/slideview",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-loading": "weui-miniprogram/loading/loading",
+    "comment":"../../../components/comments/comment"
+  }
+}

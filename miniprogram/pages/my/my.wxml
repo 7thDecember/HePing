@@ -1,0 +1,111 @@
+
+  <!--用户头像和昵称-->
+<view class="userInformation">
+  <image  class="userInfomation-avatar" src="{{avatarUrl}}"></image>
+  <view class="userInformation-nickname">
+    {{nickName}}
+  </view>
+</view>
+<!--间隔灰横条-->
+<view class="graydivide"></view>
+<!--我的消息-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation" catchtap="goToMyMessages"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_img/icon/消息.png"></image>
+      </view>
+      <view class="text">我的消息</view><!--文字-->
+      <view class="right-icon"><!--图片-->
+        <image class="icon-picture" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_img/icon/arrow.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!--间隔灰横条-->
+<view class="graydivide"></view>
+<!--收藏-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation" catchtap="goToMyCollections"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_img/icon/收藏.png"></image>
+      </view>
+      <view class="text">我的收藏</view><!--文字-->
+      <view class="right-icon"><!--图片-->
+        <image class="icon-picture" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_img/icon/arrow.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!--间隔白横线-->
+<view class="whitedivide"></view>
+<!--我的回复-->
+
+<!--间隔白横线-->
+<view class="whitedivide"></view>
+<!--我加入的-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation" catchtap="goToMyGroups"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_img/icon/加入.png"></image>
+      </view>
+      <view class="text">我加入的</view><!--文字-->
+      <view class="right-icon"><!--图片-->
+        <image class="icon-picture" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_img/icon/arrow.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!--间隔白横线-->
+<view class="whitedivide"></view>
+
+<!--间隔灰横条-->
+<view class="graydivide"></view>
+<!--设置-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_img/icon/设置.png"></image>
+      </view>
+      <view class="text">设置</view><!--文字-->
+      <view class="right-icon"><!--图片-->
+        <image class="icon-picture" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_img/icon/arrow.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!--间隔白横线-->
+<view class="whitedivide"></view>
+<!--卡包-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_img/icon/联系我们.png"></image>
+      </view>
+      <view class="text">关于我们</view><!--文字-->
+      <view class="right-icon"><!--图片-->
+        <image class="icon-picture" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_img/icon/arrow.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!--间隔白横线-->
+<view class="whitedivide"></view>
+<!--卡包-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_img/icon/反馈.png"></image>
+      </view>
+      <view class="text">意见反馈</view><!--文字-->
+      <view class="right-icon"><!--图片-->
+        <image class="icon-picture" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_img/icon/arrow.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

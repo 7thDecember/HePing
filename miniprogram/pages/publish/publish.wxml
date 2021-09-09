@@ -1,0 +1,49 @@
+<!--pages/publish/publish.wxml-->
+<mp-loading type="dot-gray" show="{{loading}}" duration="{{1500}}"></mp-loading>
+<view class="{{loading==true?'hidden':'page_container'}}">
+
+
+  <view class="section">
+    <view wx:for="{{area}}" wx:key="{{item.value}}" bindtap="chooseArea" data-area="{{item.value}}" class="area">
+      <image wx-if="{{item.url.length>0}}" src="{{item.url}}" mode="widthFix"></image>
+      <text class="{{index+1==choosenarea?'choosen':''}}">{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class='content'>
+    <view class="input">
+      <input class="title" type="text" placeholder="填写标题" maxlength="{{tlength}}" bindinput="inpTitle" value="{{title}}"/>
+      <text>{{tlength-upload_info.title.length}}</text>
+    </view>
+    <textarea placeholder='发布内容' class='text'  bindinput='inpText' value="{{content}}"></textarea>
+  </view>
+
+  <view class="img-list">
+    <!-- 图片列表 -->
+    <block wx:for="{{imgList}}" wx:key="index">
+      <view class="img-li">
+        <image class="img" src="{{item}}" bindtap="previewImg" bindlongpress="deleteImg" data-index="{{index}}"></image>
+      </view>
+    </block>
+    <!-- 上传图片 S -->
+    <view class="img-upload" wx:if="{{imgList.length<imax}}" bindtap="chooseSource">
+      <image class="uploading-icon" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_image/add.png"></image>
+    </view>
+  </view>
+
+  <view class='num_address'>
+    <text class="text">最多人数</text>
+    <text class='operator {{minStatus}}' bindtap='bindMinus'>-</text>
+    <input bindinput='bindManual' value='{{num}}'></input>
+    <text class="operator {{maxStatus}}" bindtap='bindPlus'>+</text>
+  </view>
+
+  <view class="num_address last" bindtap="openmap">
+    <text wx:if="{{address==null}}" class="text">添加地点</text>
+    <text wx:if="{{address}}" class="text">{{address}}</text>
+    <mp-icon icon="location" class="icon"></mp-icon>
+  </view>
+
+  <view class="post {{finish?'finish':'unfinish'}}" bindtap="{{finish?'post':'showToast'}}">发布</view>
+</view>
+  

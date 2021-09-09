@@ -1,0 +1,2 @@
+<!--miniprogram/pages/myCollection/myCollection.wxml-->
+<card wx:for="{{infos}}" info="{{item}}" wx:key="item._id" _id="{{item._id}}"></card>

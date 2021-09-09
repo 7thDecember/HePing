@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "tab": "../../../components/tab/tab",
+    "newMessages":"../../../components/newMessages/newMessages",
+    "myComments":"../../../components/myComments/myComments",
+    "mp-badge": "weui-miniprogram/badge/badge"
+  }
+}

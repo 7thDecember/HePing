@@ -1,0 +1,151 @@
+/* pages/publish/publish.wxss */
+
+.page_container{
+  padding: 0px 15px;
+}
+.hidden {
+  visibility: hidden;
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.area {
+  
+  position: relative;
+}
+.area image {
+  width: 150rpx;
+  border-radius: 20rpx;
+}
+.area text {
+  display: block;
+  position: absolute;
+  bottom: 20rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ccc;
+}
+.area text.choosen {
+  border-bottom: 4rpx solid #ccc;
+}
+.content {
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  height: 500rpx;
+  color: #555;
+}
+
+.content .input {
+  display: flex;
+  height: 60rpx;
+  padding-bottom: 10rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  justify-content: space-between;
+}
+.content .input text {
+  color: #999999;
+}
+.content .text {
+  padding-top: 10rpx;
+  width: 100%;
+}
+.img-list {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.img-li {
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 30rpx;
+}
+ 
+.img-li .img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+.img-upload {
+  width: 200rpx;
+  height: 200rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-upload .uploading-icon {
+  width: 50rpx;
+  height: 50rpx
+}
+
+.num_address {
+  /* width:80px; */
+  height:80rpx;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  border-radius: 3px;
+  align-items: center;
+  color: #555;
+  position: relative;
+}
+
+.num_address .text {
+  margin: 0 20rpx;
+}
+/*加号和减号*/
+.num_address .operator {
+
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2rpx solid #ddd;
+  border-radius: 6rpx;
+}
+/*普通样式*/
+.num_address .operator .normal {
+  color:#555;
+}
+/*禁用样式*/
+.num_address .operator .disable {
+  color: #999999;
+}
+/*数值*/
+.num_address input {
+  width: 60rpx;
+  height: 40rpx;
+  text-align: center;
+  font-size: 12px;
+}
+.num_address.last {
+  display: flex;
+}
+.num_address.last .text {
+  flex: 1;
+}
+
+.post {
+  width: 80%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20rpx auto 0;
+  border-radius: 40rpx;
+  color: #ffffff;
+}
+.post.unfinish {
+  background-color: mediumturquoise;
+}
+.post.finish {
+  background-color: #25b965;
+}
+
+
+
+

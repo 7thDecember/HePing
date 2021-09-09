@@ -1,0 +1,12 @@
+/* pages/home/home.wxss */
+
+.head {
+  height: 110rpx;
+}
+.hidden {
+  visibility: hidden;
+}
+
+
+
+

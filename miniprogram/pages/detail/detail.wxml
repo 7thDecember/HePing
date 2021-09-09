@@ -1,0 +1,111 @@
+<!--pages/detail/detail.wxml-->
+<view class="{{loading==true?'hidden':'page_container'}}">
+    <view class="members" wx:if="{{info.state}}">
+      <scroll-view class="scroll-x" scroll-x="true" scroll-x>
+      <view class="member" wx:for="{{info.num}}">
+        <image wx:if="{{index<info.members.length}}" src="{{info.members[index].avatarUrl}}" bindlongpress="driveOut" bindtap="goToChatroom" data-index="{{index}}"></image>
+        <mp-icon wx:if="{{index>=info.members.length}}" icon="add" size="{{10}}" color="grey" class="icon" catchtap="join"></mp-icon>
+      </view>
+    </scroll-view>
+    </view>
+    <view class="members" wx:else>
+      <scroll-view class="scroll-x" scroll-x="true" scroll-x>
+      <view class="member" wx:for="{{info.members}}">
+        <image src="{{info.members[index].avatarUrl}}" bindtap="goToChatroom" data-index="{{index}}"></image>
+      </view>
+      </scroll-view>
+    </view>
+
+
+  <view class="info">
+    <view class="head">
+      <view wx:if="{{info.state}}">
+        <mp-slideview wx:if="{{openid==info._openid}}" buttons="{{captainButtons}}" bindbuttontap="captainTap">
+          <mp-cell ext-class="title" value="{{info.areaName}} | {{info.title}}{{info.state==false?'(已发车)':''}}" >
+            <view slot="footer" class="footer-slot">
+              <image src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_image/left.png"></image>
+            </view>
+          </mp-cell>
+        </mp-slideview>
+        <mp-slideview wx:else buttons="{{inTeam==true?othersButtonsIn:othersButtonsOut}}" bindbuttontap="othersTap">
+          <mp-cell ext-class="title" value="{{info.areaName}} | {{info.title}}{{info.state==false?'(已发车)':''}}">
+            <view slot="footer" class="footer-slot">
+              <image src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_image/left.png"></image>
+            </view>
+          </mp-cell>
+        </mp-slideview>
+      </view>
+      <view wx:else>
+        <mp-slideview>
+          <mp-cell ext-class="title" value="{{info.areaName}} | {{info.title}}"></mp-cell>
+        </mp-slideview>
+      </view>
+    </view>
+
+    <view class="captain">
+      <image class="avatar" src="{{info.avatar}}"></image>
+      <view class="des">
+        <view class="nickname">{{info.nickname}}</view>
+        <text class="time_loc">{{info.date}}{{info.location.address?info.location.address:''}}</text>
+      </view>
+    </view>
+
+    <view class="detail">
+      <!-- <text>详情</text> -->
+      <view class="content">{{info.content}}</view>
+      <swiper indicator-dots="{{true}}" indicator-active-color="#BEBEBE" class="imgs" wx:if="{{info.img_path.length>0}}">
+        <swiper-item class="img" wx:for="{{info.img_path}}">
+          <image src="{{item}}" class="img" mode="aspectFit"></image>
+        </swiper-item>
+
+      </swiper>
+    </view>
+  </view>
+
+  <view class="comment">
+    <!-- <view class='liuyan'>留言板</view> -->
+    <view wx:for="{{comments}}" data-nickname="{{item.userName}}" data-id="{{item.id}}"catchtap="reply">
+      <comment
+          userName="{{item.userName}}"
+          replyTo="{{item.replyTo}}"
+          time="{{item.time}}"
+          reply="{{item.reply}}"
+          numOfUnread="{{item.numOfUnread}}"
+          firstMessage="{{item.firstMessage}}"
+          avatar="{{item.avatar}}"
+      ></comment>
+        
+    </view>
+  </view>
+
+  <view class='fix'>
+    <view class="footer">
+    <view class="message-sender" bindtap="login">
+      <input 
+        class="text-input"
+        type="text"
+        confirm-type="send"
+        bindconfirm="comment" 
+        cursor-spacing="20"
+        value="{{textInputValue}}"
+        placeholder="{{placeholder}}"
+        focus="{{focus}}"
+        bindblur="onBlur"
+      ></input>
+      <block wx:if="{{!inCollection}}">
+        <image class="collection" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_image/collect1.png" mode="aspectFill" catchtap="collect"></image>
+      </block>
+      <block wx:else>
+        <image  class="collection" src="cloud://cloud1-2gy6e8d9d5960bf8.636c-cloud1-2gy6e8d9d5960bf8-1305587529/project_image/collect2.png" mode="aspectFill" catchtap="cancleCollect"></image>
+      </block>
+    </view>
+
+    <view class="message-sender" wx:if="{{false}}">
+      <button 
+        catchtap="onGetUserProfile"
+        class="userinfo"
+      >登录</button>
+    </view>
+  </view>
+  </view>
+</view>

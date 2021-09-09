@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "mp-icon": "weui-miniprogram/icon/icon",
+    "mp-searchbar": "weui-miniprogram/searchbar/searchbar",
+    "tabs": "../../components/tab/tab",
+    "card": "../../components/card/card",
+    "mp-loading": "weui-miniprogram/loading/loading"
+  },
+  "navigationBarTitleText": "就等你上车了"
+}

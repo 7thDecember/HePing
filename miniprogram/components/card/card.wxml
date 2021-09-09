@@ -1,0 +1,20 @@
+<!--components/card/card.wxml-->
+<view class="card" catchtap="detail">
+  <view class="info">
+    <view class='content'>
+      <view class="title">
+        <text>{{info.areaName}} | {{info.title}}{{info.state==false?'(已发车)':''}}</text>
+      </view>
+      <view class="publisher_time">
+        <image class='header-icon' src='{{info.avatar}}'></image>
+        <view class="publisher">{{info.nickname}}</view>
+        <view class="time">{{info.date}}</view>
+      </view>
+    </view>
+    <image wx:if="{{info.img_path.length!=0}}"  src="{{info.img_path[0]}}" class="img"></image>
+  </view>
+  <slot></slot>
+</view>
+
+
+

@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/detail/detail",
+    "pages/publish/publish",
+    "pages/my/my",
+    "pages/message/message",
+    "pages/myMessage/myMessages",
+    "pages/myCollection/myCollection",
+    "pages/myGroups/myGroups",
+    "pages/myReplys/myReplys"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icons/home1.png",
+        "selectedIconPath": "images/icons/home2.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "iconPath": "images/icons/publish1.png",
+        "selectedIconPath": "images/icons/publish2.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/icons/my1.png",
+        "selectedIconPath": "images/icons/my2.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": " "
+    }
+  },
+  "style": "v2"
+}

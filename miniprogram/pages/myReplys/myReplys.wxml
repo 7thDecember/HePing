@@ -1,0 +1,2 @@
+<!--miniprogram/pages/myReplys/myReplys.wxml-->
+<card wx:for="{{infos}}" info="{{item}}" wx:key="item._id" bindtap="detail" data-index="{{item._id}}"></card>

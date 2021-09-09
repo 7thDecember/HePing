@@ -1,0 +1,51 @@
+<!--pages/my/myMessage/myMessages.wxml-->
+<view class="container">
+  <tab
+    style="width: 100%; height: 100%"
+    tabs="{{tabs}}"
+    binditemchange="handleItemChange"
+  ></tab>
+
+  <!--私信-->
+  <view hidden="{{currentTab!==0}}">
+    <!--私信消息列表-->
+    <scroll-view scroll-y="true" class="message-list" style="margin-top:{{navH+47}}px;height:1200rpx">
+      <view wx:for="{{messages}}">
+        <view catchtap="goToChatroom" data-openid="{{item.user_openid}}" data-name="{{item.userName}}">
+          <newMessages
+          style="width: 100%; height: 100%"
+          userName="{{item.userName}}"
+          time="{{item.time}}"
+          numOfUnread="{{item.numOfUnread}}"
+          firstMessage="{{item.firstMessage}}"
+          avatar="{{item.avatar}}"
+          ></newMessages>
+        </view>
+        
+      </view>
+      
+
+    </scroll-view>
+  </view>
+  
+  <!--留言-->
+  <view hidden="{{currentTab!==1}}">
+      <view wx:for="{{comments}}" catchtap="goToPost" data-nickname="{{item.userName}}" data-id="{{item.id}}" data-postid="{{item.postid}}">
+        <myComments
+          userName="{{item.userName}} 回复了你"
+          replyTo="{{item.replyTo}}"
+          time="{{item.time}}"
+          reply="{{item.reply}}"
+          numOfUnread="{{item.numOfUnread}}"
+          firstMessage="{{item.firstMessage}}"
+          avatar="{{item.avatar}}"
+          read="{{item.read}}"
+      ></myComments>  
+    </view>
+
+  </view>
+  
+
+</view>
+
+
